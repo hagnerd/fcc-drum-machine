@@ -1,11 +1,21 @@
 import React from "react";
+import styled from "react-emotion";
+
+const F = styled("div")`
+  grid-column-start: span 3;
+  grid-row-start: span 1;
+  text-align: center;
+`;
+
+const P = styled("p")`
+  color: #304655;
+  padding: 15px 20px;
+`;
 
 const Footer = () => (
-  <div id="footer">
-    <p>Made and Designed by Matt Hagner</p>
-    <p>Made with React &amp; Emotion</p>
-    <p>Tested with Jest &amp; React Testing Library</p>
-  </div>
+  <F id="footer">
+    <P>Made and Designed by Matt Hagner</P>
+  </F>
 );
 
 export default Footer;

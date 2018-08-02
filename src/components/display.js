@@ -5,6 +5,13 @@ import styled from "react-emotion";
 const Bg = styled("div")`
   background-color: #bbefc9;
   box-shadow: inset 3px 3px 3px #8be09f;
+  @media (max-width: 420px) {
+    grid-column-start: span 3;
+  }
+  @media (min-width: 800px) {
+    grid-column-start: span 3;
+  }
+  grid-row-start: span 1;
 `;
 
 const H3 = styled("h3")`

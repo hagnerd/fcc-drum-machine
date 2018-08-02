@@ -1,12 +1,24 @@
 import React from "react";
 import PropTypes from "prop-types";
+import styled from "react-emotion";
 import Pads from "../data";
 
+const Button = styled("button")`
+  background-color: #405768;
+  color: #607d97;
+  grid-column-start: span 1;
+  grid-row-start: span 1;
+  outline: none;
+  &:focus {
+    border: 3px solid #f89d80;
+  }
+`;
+
 const DrumPad = ({ id, triggerSound, src }) => (
-  <button className="drum-pad" onClick={() => triggerSound(id)}>
+  <Button className="drum-pad" onClick={() => triggerSound(id)}>
     {id}
     <audio className="clip" id={id} src={src} />
-  </button>
+  </Button>
 );
 
 DrumPad.propTypes = {
